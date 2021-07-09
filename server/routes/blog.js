@@ -9,7 +9,6 @@ function getCookieExpires () {
     d.setTime(d.getTime() + (24 * 60 * 60 * 1000))
     return d.toGMTString()
 }
-
 router.get('/list', loginCheck, async function (ctx, next) {//查询
     var sql = `select * from blog where 1=1`
     var title = ctx.query.title || ''
