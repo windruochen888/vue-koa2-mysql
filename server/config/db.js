@@ -3,7 +3,7 @@ var MYSQL_CONFIG
 var REDIS_CONFIG
 if (env === 'dev') {
     MYSQL_CONFIG = {
-        host: 'localhost',
+        host: '127.0.0.1',
         user: 'root',
         password: '1111',
         port: '3306',
@@ -11,11 +11,11 @@ if (env === 'dev') {
     }
     REDIS_CONFIG = {
         port: 6379,
-        host: 'localhost'
+        host: '127.0.0.1'
     }
-} else if (env === 'prd') {
+} else if (env === 'production') {
     MYSQL_CONFIG = {
-        host: 'localhost',
+        host: '127.0.0.1',
         user: 'root',
         password: '1111',
         port: '3306',
@@ -23,7 +23,7 @@ if (env === 'dev') {
     }
     REDIS_CONFIG = {
         port: 6379,
-        host: 'localhost'
+        host: '127.0.0.1'
     }
 }
 module.exports = { MYSQL_CONFIG, REDIS_CONFIG }
